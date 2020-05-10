@@ -10,7 +10,7 @@ class TPQueue
         end;         // конец очереди
     int count;       // счетчик элементов
 public:
-    TQueue(int =100);          // конструктор по умолчанию
+    TQueue(int);          // конструктор по умолчанию
     ~TQueue();                 // деструктор
 
     void push(const T &, int preoritet); // добавить элемент в очередь
@@ -21,7 +21,7 @@ public:
 };
 // конструктор по умолчанию
 template<typename T>
-TQueue<T>::TQueue(int sizeQueue) :
+TQueue<T>::TQueue(int sizeQueue = 100) :
     size(sizeQueue),
     begin(0), end(0), count(0)
 {
